@@ -1,0 +1,33 @@
+{
+  "name": "Arquetipo NestJs",
+
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+
+  "service": "node",
+
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  "postCreateCommand": "npm install && npm run start:dev",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "mhutchie.git-graph",
+        "pflannery.vscode-versionlens",
+        "esbenp.prettier-vscode",
+        "firsttris.vscode-jest-runner",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "always"
+        }
+      }
+    }
+  },
+  "remoteUser": "node",
+  "mounts": ["type=bind,source=~/.ssh,target=/home/node/.ssh,readonly"]
+}

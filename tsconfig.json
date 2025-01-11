@@ -11,7 +11,13 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@usecases/*": ["./src/use-cases/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@infrastructure/*": ["./src/infrastructure/*"],
+      "@interface-adapters/*": ["./src/interface-adapters/*"],
+      "@test/*": ["./test/*"]
+    }
   }
 }
